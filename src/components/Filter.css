@@ -1,0 +1,17 @@
+.filter-bar {
+
+    color: grey;
+    font-size: smaller;
+    
+}
+a{
+    padding: 8px;
+    text-decoration: none;
+    color: rgb(108, 108, 108);
+    cursor: pointer;
+}
+a:focus,
+a:active {
+    color: black;
+}
+
