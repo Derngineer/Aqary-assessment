@@ -1,5 +1,5 @@
 import TodoCreate from "./components/TodoCreate";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Todo from "./components/Todo";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,7 +10,7 @@ function App() {
   // const initialTodos = JSON.parse(localStorage.getItem('todos'));
 
   const [todos, setTodos] = useState<Todo[]>([]);
-  
+
   // useEffect(() => {
   //   // Save todos to localStorage whenever they change
   //   localStorage.setItem('todos', JSON.stringify(todos));
