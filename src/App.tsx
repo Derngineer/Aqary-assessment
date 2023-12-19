@@ -7,13 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  const initialTodos = JSON.parse(localStorage.getItem('todos'));
+  // const initialTodos = JSON.parse(localStorage.getItem('todos'));
 
-  const [todos, setTodos] = useState<Todo[]>(initialTodos);
-  useEffect(() => {
-    // Save todos to localStorage whenever they change
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
+  const [todos, setTodos] = useState<Todo[]>([]);
+  
+  // useEffect(() => {
+  //   // Save todos to localStorage whenever they change
+  //   localStorage.setItem('todos', JSON.stringify(todos));
+  // }, [todos]);
 
   const createTodo =(text: string)=> {
 
