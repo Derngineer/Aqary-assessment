@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  
+
   const initialTodos = JSON.parse(localStorage.getItem('todos'));
 
   const [todos, setTodos] = useState<Todo[]>(initialTodos);
@@ -40,8 +40,6 @@ function App() {
     <>
     <TodoCreate createTodo={createTodo} todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} clearTodoList = {clearTodoList} />
 
-   
- 
     <div style={{backgroundColor:"white", height:"100vh"}}></div>
 
     </>
