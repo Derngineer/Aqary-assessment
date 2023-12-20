@@ -1,20 +1,31 @@
 import TodoCreate from "./components/TodoCreate";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Todo from "./components/Todo";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 function App() {
+  
 
-  // const initialTodos = JSON.parse(localStorage.getItem('todos'));
 
   const [todos, setTodos] = useState<Todo[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   // Save todos to localStorage whenever they change
-  //   localStorage.setItem('todos', JSON.stringify(todos));
-  // }, [todos]);
+  useEffect(() => {
+    const storedTodos = sessionStorage.getItem('todos');
+    if (storedTodos) {
+      setTodos(JSON.parse(storedTodos));
+    }
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      sessionStorage.setItem('todos', JSON.stringify(todos));
+    }
+  }, [todos, loading]);
+
 
   const createTodo =(text: string)=> {
 
