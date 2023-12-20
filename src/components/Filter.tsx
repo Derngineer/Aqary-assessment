@@ -16,6 +16,7 @@ const Filter: React.FC<FilterProps> =({onFilter, count,filter})=>{
         <Fragment>
             {/* filter logic, according to active, completed, all, also clear all button */}
             <div className='container filter-bar'>
+
                 <div className="row">
                     <div className="col-md-3">
                         {/* count items that are not yet done */}
@@ -30,6 +31,7 @@ const Filter: React.FC<FilterProps> =({onFilter, count,filter})=>{
                         <a  className= "clickable-tags" style={{color :filter ==='Clear'? 'blue' : 'grey'}} type="button" onClick={()=>onFilter('Clear')}>
                         Clear Completed</a></div>
                 </div>
+                
             </div>
         </Fragment>
     )
