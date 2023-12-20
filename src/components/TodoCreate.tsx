@@ -144,7 +144,7 @@ interface TodoCreateProps {
                     <li className=".filter-group" style={{ width: '100%', maxWidth: '502px', marginBottom: '10px' }} >
                     <Filter count = {count}  onFilter={filterTodos} filter={filter} /> 
                     </li>
-                    <div className="row justify-content-center" style={{color: "grey"}} >Drag and drop to reorder list</div>   
+                    <div className="row justify-content-center m-lg-4" style={{color: "grey"}} >Drag and drop to reorder list</div>   
             </ul> 
                        
         </div>
