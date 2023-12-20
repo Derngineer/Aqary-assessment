@@ -50,7 +50,13 @@ function App() {
 
   return (
     <>
-    <TodoCreate createTodo={createTodo} todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} clearTodoList = {clearTodoList} />
+    <TodoCreate 
+    createTodo={createTodo}
+     todos={todos} 
+     toggleTodo={toggleTodo} 
+     deleteTodo={deleteTodo} 
+     clearTodoList = {clearTodoList}
+      />
 
     <div style={{backgroundColor:"white", height:"100vh"}}></div>
 
